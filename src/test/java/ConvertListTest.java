@@ -15,15 +15,7 @@ public class ConvertListTest {
         int[][] sourceArray = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 
         List<Integer> testList = new ArrayList<>();
-        testList.add(1);
-        testList.add(2);
-        testList.add(3);
-        testList.add(4);
-        testList.add(5);
-        testList.add(6);
-        testList.add(7);
-        testList.add(8);
-        testList.add(9);
+        testList.addAll(Arrays.asList(1, 2, 3, 4 , 5, 6, 7, 8, 9));
 
         List<Integer> resultList = new ConvertList().toList(sourceArray);
 
