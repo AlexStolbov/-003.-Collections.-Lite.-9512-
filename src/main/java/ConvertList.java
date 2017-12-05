@@ -3,6 +3,11 @@ import java.util.List;
 
 public class ConvertList {
 
+    /**
+     * Convert array of int to list ogf int.
+     * @param array - array of int
+     * @return - list of int.
+     */
     List<Integer> toList(int[][] array) {
         final List<Integer> result = new ArrayList<>();
 
@@ -16,6 +21,12 @@ public class ConvertList {
 
     }
 
+    /**
+     * Evenly splits the list into the number of rows of a two-dimensional array.
+     * @param list - list of int.
+     * @param rows - number of rows.
+     * @return - list.
+     */
     int[][] toArray(List<Integer> list, int rows) {
 
         int columns = (int) Math.ceil((float) list.size() / rows);
@@ -34,4 +45,20 @@ public class ConvertList {
 
         return resArray;
     }
+
+    /**
+     * Converts a list containing arrays to the list.
+     * @param list - a list containing arrays of int.
+     * @return list containing int.
+     */
+    public List<Integer> convert(List<int[]> list) {
+        List<Integer> resList = new ArrayList<>();
+        for (int[] currArray : list) {
+            for (int currInt : currArray) {
+                resList.add(currInt);
+            }
+        }
+        return resList;
+    }
+
 }

@@ -45,4 +45,19 @@ public class ConvertListTest {
 
     }
 
+    @Test
+    public void whenPassListOfArrayThenGetList() throws Exception {
+        int[] sourceArray1 = {1, 2, 3};
+        int[] sourceArray2 = {4, 5, 6, 7};
+        int[] sourceArray3 = {8, 9, 10, 11, 12};
+        List<int[]> sourceList = Arrays.asList(sourceArray1, sourceArray2, sourceArray3);
+
+        List<Integer> testList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+        List<Integer> resList = new ConvertList().convert(sourceList);
+
+        assertThat(true, is(testList.equals(resList)));
+
+    }
+
 }
