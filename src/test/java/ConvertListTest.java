@@ -15,7 +15,7 @@ public class ConvertListTest {
         int[][] sourceArray = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 
         List<Integer> testList = new ArrayList<>();
-        testList.addAll(Arrays.asList(1, 2, 3, 4 , 5, 6, 7, 8, 9));
+        testList.addAll(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
 
         List<Integer> resultList = new ConvertList().toList(sourceArray);
 
@@ -39,16 +39,7 @@ public class ConvertListTest {
 
         int[][] resArray = new ConvertList().toArray(sourceList, rows);
 
-        boolean res = true;
-        if (testArray.length == resArray.length) {
-            for (int i = 0; i < testArray.length; i++) {
-                if (!Arrays.equals(testArray[i], resArray[i])) {
-                    res = false;
-                }
-            }
-        } else {
-            res = false;
-        }
+        boolean res = Arrays.deepEquals(testArray, resArray);
 
         assertThat(true, is(res));
 
