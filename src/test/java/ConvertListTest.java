@@ -1,6 +1,5 @@
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import static org.hamcrest.core.Is.is;
 import java.util.ArrayList;
 import java.util.Arrays;
